@@ -21,7 +21,7 @@ docker run \
 --env app_repo=github-status \
 --env git_sha=98fc496c4fb59448eef1341d3e8373ec366d4f16 \
 --env state=success \
---env description \
---env context \
+--env description="My status description" \
+--env context="my-status-name" \
 stephenshelton/github-status:1.0.0
 ```

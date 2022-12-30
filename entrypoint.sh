@@ -1,12 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
-# Check if the ACCESS_TOKEN file exists
-if [ -f ${tokenFile} ]; then
-  # If the file exists, read the contents of the file into the ACCESS_TOKEN variable
+if [ -n "$token_file" ] && [ -f "$token_file" ]; then
+  # If the token_file variable is set and points to a file that exists, read the contents of the file into the ACCESS_TOKEN variable
   echo "Using mounted github token"
   ACCESS_TOKEN=$(cat ${token_file})
 else
-  # If the file does not exist, use the ACCESS_TOKEN environment variable
+  # If the token_file variable is not set or does not point to a file that exists, use the access_token environment variable
   echo "Using environment github token"
   ACCESS_TOKEN=${access_token}
 fi
