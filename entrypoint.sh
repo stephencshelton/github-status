@@ -18,5 +18,6 @@ curl -X POST \
   -d "{
     \"state\": \"${state}\",
     \"description\": \"${description}\",
-    \"context\": \"${context}\"
+    \"context\": \"${context}\",
+    \"target_url\": \"${target_url}\"
   }"
